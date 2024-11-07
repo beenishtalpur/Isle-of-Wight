@@ -1,0 +1,512 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9fc;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3c9d9b;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: justify-content;
+    flex-wrap: wrap;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space the elements to opposite sides */
+    align-items: center;
+    width: 100%; /* Make sure the container takes full width */
+    padding: 0 20px; /* Add padding for spacing from the edges */
+}
+
+.tagline {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0; /* Remove any default margin */
+}
+
+nav {
+    margin: 0; /* Remove any default margin from the nav */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #318484;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3c9d9b;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery {
+    text-align: center;
+    background-color: #e8f7f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.gallery h2 {
+    margin-bottom: 15px;
+    color: #3c9d9b;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 30%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.zoomed {
+    transform: scale(1.5);
+    z-index: 10;
+    position: relative;
+}
+
+.discover-btn {
+    background-color: #3c9d9b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.discover-btn:hover {
+    background-color: #318484;
+}
+
+.introduction {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.introduction h3,
+.testimonials h3 {
+    color: #3c9d9b; /* Use the same color as the 'Interesting Reads' heading */
+}
+
+.testimonials {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 30%;
+}
+
+.testimonial-box span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+}
+
+.articles {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.center-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3c9d9b;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.article-box {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 30%;
+    transition: transform 0.3s;
+}
+
+.article-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-box img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3c9d9b;
+    color: white;
+}
+
+.attraction-section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.attraction-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-text .text {
+    order: 1;
+}
+
+.left-text .image {
+    order: 2;
+}
+
+.right-text .text {
+    order: 2;
+}
+
+.right-text .image {
+    order: 1;
+}
+
+.text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text h3 {
+    font-size: 24px;
+    color: #3c9d9b;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.book-btn {
+    display: inline-block;
+    background-color: #3c9d9b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #318484;
+}
+
+.image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form-section {
+    padding: 40px 20px;
+    background-color: #f5f9fc;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 28px;
+    color: #3c9d9b;
+    margin-bottom: 20px;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+}
+
+.submit-btn {
+    background-color: #3c9d9b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #318484;
+}
+.contact-details {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.required {
+    color: red;
+}
+
+.checkbox-group {
+    text-align: left;
+}
+
+.checkbox-item {
+    margin: 5px 0;
+}
+.contact-details h2 {
+    color: #3c9d9b; /* Use the same color as the 'Book a Tour with Us' heading */
+    font-size: 28px; /* Ensure the font size matches if needed */
+}
+
+.accommodation-section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accommodation-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-image .text,
+.left-image .image {
+    order: 1;
+}
+
+.right-image .image,
+.left-image .text {
+    order: 2;
+}
+
+.text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text h3 {
+    font-size: 24px;
+    color: #3c9d9b;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.find-out-btn {
+    display: inline-block;
+    background-color: #3c9d9b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.find-out-btn:hover {
+    background-color: #318484;
+}
+
+.image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.activity-section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.activity-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-image .text,
+.left-image .image {
+    order: 1;
+}
+
+.right-image .image,
+.left-image .text {
+    order: 2;
+}
+
+.text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text h3 {
+    font-size: 24px;
+    color: #3c9d9b;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #3c9d9b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #318484;
+}
+
+.image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isle of Wight - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <p class="tagline">Your Ultimate Travel Guide to the Isle of Wight</p> <!-- Only the tagline remains -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore</a>
+                    <div class="dropdown-content">
+                        <a href="activities.html">Activities</a>
+                        <a href="accommodation.html">Accommodation</a>
+                        <a href="attractions.html">Attractions</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <main>
+        <section class="gallery">
+            <h2>Discover the Isle of Wight</h2>
+            <div class="gallery-images">
+                <img src="images/isle1.jpg" alt="Isle of Wight Image 1" class="zoomable">
+                <img src="images/isle2.jpg" alt="Isle of Wight Image 2" class="zoomable">
+                <img src="images/isle3.jpg" alt="Isle of Wight Image 3" class="zoomable">
+            </div>
+            <button class="discover-btn">Discover Now!</button>
+        </section>
+
+        <section class="introduction">
+            <h3>About the Isle of Wight</h3>
+            <p>The Isle of Wight, located off the south coast of England, is known for its stunning landscapes, charming villages, and rich history. From beautiful beaches to historical landmarks, the island offers a perfect blend of adventure and relaxation.</p>
+            <p>Explore the Needles, visit Queen Victoria's Osborne House, or enjoy a serene walk along the coast. There’s always something new to discover on the Isle of Wight.</p>
+        </section>
+
+        <section class="testimonials">
+            <h3>What Our Travelers Say</h3>
+            <div class="testimonials-container">
+                <div class="testimonial-box">
+                    <p>"A breathtaking experience! The Isle of Wight exceeded all our expectations."</p>
+                    <span>- Emily J.</span>
+                </div>
+                <div class="testimonial-box">
+                    <p>"Wonderful landscapes and friendly people. A must-visit destination!"</p>
+                    <span>- Michael S.</span>
+                </div>
+                <div class="testimonial-box">
+                    <p>"The perfect getaway. We loved every moment on the island."</p>
+                    <span>- Sarah L.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles">
+            <h3 class="center-heading">Interesting Reads</h3> <!-- Center aligned heading -->
+            <div class="articles-container">
+                <div class="article-box">
+                    <a href="article1.html">
+                        <img src="images/article1.jpg" alt="Article 1">
+                        <h4>Top 5 Hidden Gems of the Isle</h4>
+                    </a>
+                </div>
+                <div class="article-box">
+                    <a href="article2.html">
+                        <img src="images/article2.jpg" alt="Article 2">
+                        <h4>History of Osborne House</h4>
+                    </a>
+                </div>
+                <div class="article-box">
+                    <a href="article3.html">
+                        <img src="images/article3.jpg" alt="Article 3">
+                        <h4>Best Coastal Walks</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Isle of Wight Tourism. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Zoom-in effect for gallery images
+        const images = document.querySelectorAll('.zoomable');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                img.classList.add('zoomed');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            images.forEach(img => {
+                if (!img.contains(e.target)) {
+                    img.classList.remove('zoomed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

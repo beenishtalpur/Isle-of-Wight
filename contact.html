@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isle of Wight - Contact Us</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Same CSS file for consistency -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <p class="tagline">Your Ultimate Travel Guide to the Isle of Wight</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Explore</a>
+                        <div class="dropdown-content">
+                            <a href="activities.html">Activities</a>
+                            <a href="accommodation.html">Accommodation</a>
+                            <a href="attractions.html">Attractions</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-details">
+            <h2>Contact Us</h2>
+            <p>Email: info@isleofwighttours.com</p>
+            <p>Phone: +44 123 456 7890</p>
+            <p>Address: 123 Seaside Lane, Isle of Wight, UK</p>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Book a Tour with Us</h2>
+            <form action="#" method="post" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name: <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="tour-date">Preferred Tour Date: <span class="required">*</span></label>
+                    <input type="date" id="tour-date" name="tour-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Select Tourist Attractions: <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="select-all" onclick="selectAllAttractions()"> Select All
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="attractions" id="needles" value="The Needles"> The Needles
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="attractions" id="osborne-house" value="Osborne House"> Osborne House
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="attractions" id="carisbrooke-castle" value="Carisbrooke Castle"> Carisbrooke Castle
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="attractions" id="ventnor-botanic" value="Ventnor Botanic Garden"> Ventnor Botanic Garden
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="trip-type">Type of Trip: <span class="required">*</span></label>
+                    <select id="trip-type" name="trip-type" required>
+                        <option value="solo">Solo Trip</option>
+                        <option value="couple">Couple</option>
+                        <option value="special-occasion">Special Occasion</option>
+                        <option value="school-trip">School Trip</option>
+                        <option value="group-tour">Group Tour</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="accommodation">Type of Accommodation:</label>
+                    <select id="accommodation" name="accommodation">
+                        <option value="hotel">Hotel</option>
+                        <option value="bed-and-breakfast">Bed & Breakfast</option>
+                        <option value="self-catering">Self-Catering</option>
+                        <option value="camping">Camping</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferences">Special Requests or Preferences:</label>
+                    <textarea id="preferences" name="preferences" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Isle of Wight Tourism. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function selectAllAttractions() {
+            const selectAllCheckbox = document.getElementById('select-all');
+            const checkboxes = document.querySelectorAll('input[name="attractions"]');
+            checkboxes.forEach(checkbox => checkbox.checked = selectAllCheckbox.checked);
+        }
+    </script>
+</body>
+</html>
+
